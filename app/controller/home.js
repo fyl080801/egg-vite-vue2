@@ -2,7 +2,6 @@
 
 const Controller = require('egg').Controller
 const { Route, HttpGet } = require('egg-decorator-router')
-
 @Route()
 class HomeController extends Controller {
   @HttpGet('/')
