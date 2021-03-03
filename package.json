@@ -1,0 +1,66 @@
+{
+  "name": "egg-vite-vue2",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "egg": {
+    "declarations": true
+  },
+  "eggScriptsConfig": {
+    "daemon": true,
+    "env": "prod",
+    "title": "egg-vite-vue2"
+  },
+  "dependencies": {
+    "egg": "^2.15.1",
+    "egg-decorator-router": "^1.0.7",
+    "egg-scripts": "^2.11.0",
+    "egg-view-nunjucks": "^2.3.0",
+    "egg-vite-plugin": "^1.0.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-legacy": "^1.3.1",
+    "@vue/runtime-dom": "^3.0.7",
+    "autod": "^3.0.1",
+    "autod-egg": "^1.1.0",
+    "babel-eslint": "^10.1.0",
+    "babel-plugin-transform-decorators-legacy": "^1.3.5",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "egg-bin": "^4.11.0",
+    "egg-ci": "^1.11.0",
+    "egg-mock": "^4.0.1",
+    "eslint": "^7.21.0",
+    "eslint-config-egg": "^9.0.0",
+    "mkdirp": "^1.0.4",
+    "mocha": "5.2.0",
+    "vite": "^2.0.5",
+    "vite-plugin-vue2": "^1.2.2",
+    "vue": "^2.6.12",
+    "vue-router": "^3.5.1"
+  },
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "scripts": {
+    "start": "egg-scripts start",
+    "stop": "egg-scripts stop",
+    "dev": "egg-bin dev",
+    "debug": "egg-bin debug",
+    "test": "npm run lint -- --fix && npm run test-local",
+    "test-local": "egg-bin test",
+    "cov": "egg-bin cov",
+    "lint": "eslint .",
+    "ci": "npm run lint && npm run cov",
+    "autod": "autod",
+    "dist": "vite build -c vite.config.js"
+  },
+  "ci": {
+    "version": "10"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "",
+  "license": "MIT"
+}
