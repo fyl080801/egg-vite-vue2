@@ -3,5 +3,6 @@
     "target": "esnext",
     "experimentalDecorators": true
   },
-  "include": ["**/*"]
+  "include": ["**/*"],
+  "exclude": ["node_modules", "dist"]
 }
