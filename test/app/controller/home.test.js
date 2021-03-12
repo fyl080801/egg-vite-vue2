@@ -11,9 +11,9 @@ describe('test/app/controller/home.test.js', () => {
     // yield ctx.service.xx();
   });
 
-  it('should GET /', () => {
+  it('should GET /api', () => {
     return app.httpRequest()
-      .get('/')
+      .get('/api')
       .expect('hi, egg')
       .expect(200);
   });

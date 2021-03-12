@@ -11,6 +11,13 @@ class HomeController extends Controller {
 
     await ctx.vite.render('index.html', { appTitle: 'vite vue2' })
   }
+
+  @HttpGet('/api')
+  api() {
+    const { ctx } = this
+
+    ctx.body = 'hi, egg'
+  }
 }
 
 module.exports = HomeController
