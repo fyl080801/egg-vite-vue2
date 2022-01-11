@@ -1,9 +1,9 @@
 'use strict';
 
-function makeInjectedResponse(koaCtx, whenEnded) {
-  const res = koaCtx.res;
+function makeInjectedResponse(ctx, end) {
+  const res = ctx.res;
 
-  res.on('close', whenEnded).on('finish', whenEnded);
+  res.on('close', end).on('finish', end);
 
   const dummyRes = Object.create(res);
   ['setHeader', 'writeHead', 'write', 'end'].forEach((name) => {
@@ -74,6 +74,7 @@ module.exports = () => {
   return async (ctx, next) => {
     const server = await ctx.service.vite.getServer();
 
+    // 因为vite的中间件是基于express，而egg是基于koa，因此要转换
     await koaConnect(server.middlewares)(ctx, next);
   };
 };

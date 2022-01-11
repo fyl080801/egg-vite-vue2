@@ -10,6 +10,7 @@ class HomeController extends Controller {
   async index() {
     const server = await this.ctx.service.vite.getServer();
 
+    // 使用vite服务输出视图
     const html = await server.transformIndexHtml(
       this.ctx.request.url,
       await fs.promises.readFile(

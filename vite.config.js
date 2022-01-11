@@ -4,6 +4,7 @@ import { createVuePlugin } from 'vite-plugin-vue2';
 
 export default defineConfig({
   server: {
+    // 重点，使用中间件模式运行
     middlewareMode: true,
     fs: {
       allow: ['..'],
