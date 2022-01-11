@@ -1,9 +1,22 @@
+<script>
+import { defineComponent, ref } from '@vue/composition-api';
+
+export default defineComponent({
+  setup() {
+    const text = ref('');
+
+    return {
+      text,
+      serverdata: window.SERVER_DATA,
+    };
+  },
+});
+</script>
+
 <template>
   <div>
-    <ul>
-      <li><router-link to="/home">home</router-link></li>
-      <li><router-link to="/about">about</router-link></li>
-    </ul>
-    <router-view></router-view>
+    <h2>{{ serverdata }}</h2>
+    <input v-model="text" />
+    <p>{{ text }}</p>
   </div>
 </template>

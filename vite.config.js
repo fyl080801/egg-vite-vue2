@@ -1,14 +1,18 @@
-'use strict'
+import { defineConfig } from 'vite';
+import legacy from '@vitejs/plugin-legacy';
+import { createVuePlugin } from 'vite-plugin-vue2';
 
-const { defineConfig } = require('vite')
-const { createVuePlugin } = require('vite-plugin-vue2')
-const legacy = require('@vitejs/plugin-legacy')
-
-module.exports = defineConfig({
+export default defineConfig({
+  server: {
+    middlewareMode: true,
+    fs: {
+      allow: ['..'],
+    },
+  },
   plugins: [
-    createVuePlugin({
-      jsx: true,
+    legacy({
+      targets: ['defaults', 'not IE 11'],
     }),
-    legacy({ targets: ['defaults', 'not IE 11'] }),
+    createVuePlugin(),
   ],
-})
+});

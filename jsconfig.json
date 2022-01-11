@@ -1,8 +1,3 @@
 {
-  "compilerOptions": {
-    "target": "esnext",
-    "experimentalDecorators": true
-  },
-  "include": ["**/*"],
-  "exclude": ["node_modules", "dist"]
+  "include": ["**/*"]
 }

@@ -1,13 +1,9 @@
-import Vue from 'vue'
-import App from './App.vue'
-import Router from './router'
+import Vue from 'vue';
+import CompositionApi from '@vue/composition-api';
+import App from './App.vue';
 
-import Element from 'element-ui'
-import 'element-ui/lib/theme-chalk/index.css'
-
-Vue.use(Element)
+Vue.use(CompositionApi);
 
 new Vue({
-  router: Router,
   render: (h) => h(App),
-}).$mount('#app')
+}).$mount('#app');

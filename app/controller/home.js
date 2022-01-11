@@ -1,23 +1,27 @@
-'use strict'
+'use strict';
 
-const Controller = require('egg').Controller
-const { Route, HttpGet } = require('egg-decorator-router')
-@Route()
+const Controller = require('egg').Controller;
+
+const fs = require('fs');
+
+const path = require('path');
+
 class HomeController extends Controller {
-  @HttpGet('/')
-  @HttpGet('*')
   async index() {
-    const { ctx } = this
+    const server = await this.ctx.service.vite.getServer();
 
-    await ctx.vite.render('index.html', { appTitle: 'vite vue2' })
-  }
+    const html = await server.transformIndexHtml(
+      this.ctx.request.url,
+      await fs.promises.readFile(
+        path.join(process.cwd(), 'index.html'),
+        'utf-8',
+      ),
+    );
 
-  @HttpGet('/api')
-  api() {
-    const { ctx } = this
-
-    ctx.body = 'hi, egg'
+    this.ctx.body = await this.ctx.renderString(html, {
+      SERVER_DATA: 'server template data',
+    });
   }
 }
 
-module.exports = HomeController
+module.exports = HomeController;

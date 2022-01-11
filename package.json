@@ -1,51 +1,36 @@
 {
-  "name": "egg-vite-vue2",
+  "name": "test2",
   "version": "1.0.0",
   "description": "",
   "private": true,
-  "egg": {
-    "declarations": true
-  },
-  "eggScriptsConfig": {
-    "daemon": true,
-    "env": "prod",
-    "title": "egg-vite-vue2"
-  },
   "dependencies": {
     "egg": "^2.15.1",
-    "egg-decorator-router": "^1.0.7",
     "egg-scripts": "^2.11.0",
     "egg-view-nunjucks": "^2.3.0",
-    "egg-vite-plugin": "^1.1.4"
+    "koa-connect": "^2.1.0",
+    "koa2-connect": "^1.0.2"
   },
   "devDependencies": {
-    "@vitejs/plugin-legacy": "^1.3.1",
-    "@vue/runtime-dom": "latest",
+    "@vitejs/plugin-legacy": "^1.6.4",
+    "@vue/composition-api": "^1.4.3",
     "autod": "^3.0.1",
     "autod-egg": "^1.1.0",
-    "babel-eslint": "^10.1.0",
-    "babel-plugin-transform-decorators-legacy": "^1.3.5",
-    "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "egg-bin": "^4.11.0",
     "egg-ci": "^1.11.0",
-    "egg-mock": "^4.0.1",
-    "element-ui": "^2.15.1",
-    "eslint": "^7.21.0",
-    "eslint-config-egg": "^9.0.0",
-    "mkdirp": "^1.0.4",
-    "mocha": "5.2.0",
-    "typescript": "^4.2.3",
-    "vite": "^2.0.5",
-    "vite-plugin-vue2": "^1.3.2",
-    "vue": "^2.6.12",
-    "vue-router": "^3.5.1"
+    "egg-mock": "^3.21.0",
+    "eslint": "^5.13.0",
+    "eslint-config-egg": "^7.1.0",
+    "vite": "^2.7.10",
+    "vite-plugin-vue2": "^1.9.2",
+    "vue": "^2.6.14",
+    "vue-template-compiler": "^2.6.14"
   },
   "engines": {
-    "node": ">=12.0.0"
+    "node": ">=10.0.0"
   },
   "scripts": {
-    "start": "egg-scripts start",
-    "stop": "egg-scripts stop",
+    "start": "egg-scripts start --daemon --title=egg-server-test2",
+    "stop": "egg-scripts stop --title=egg-server-test2",
     "dev": "egg-bin dev",
     "debug": "egg-bin debug",
     "test": "npm run lint -- --fix && npm run test-local",
@@ -53,11 +38,7 @@
     "cov": "egg-bin cov",
     "lint": "eslint .",
     "ci": "npm run lint && npm run cov",
-    "autod": "autod",
-    "dist": "vite build -c vite.config.js"
-  },
-  "ci": {
-    "version": "12"
+    "autod": "autod"
   },
   "repository": {
     "type": "git",

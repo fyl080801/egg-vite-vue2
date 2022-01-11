@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 /** @type Egg.EggPlugin */
 module.exports = {
@@ -10,12 +10,4 @@ module.exports = {
     enable: true,
     package: 'egg-view-nunjucks',
   },
-  vitePlugin: {
-    enable: true,
-    package: 'egg-vite-plugin',
-  },
-  decoratorRouter: {
-    enable: true,
-    package: 'egg-decorator-router',
-  },
-}
+};

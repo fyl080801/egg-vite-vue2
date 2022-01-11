@@ -1,9 +1,9 @@
 {
   "extends": "eslint-config-egg",
-  "parser": "babel-eslint",
   "rules": {
-    "array-bracket-spacing": "off",
     "arrow-parens": "off",
-    "semi": "off"
+    "array-bracket-spacing": "off",
+    "no-unused-vars": "off",
+    "comma-dangle": "off"
   }
 }

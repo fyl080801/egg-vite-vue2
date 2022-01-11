@@ -12,6 +12,3 @@ run/
 *.un~
 typings/
 .nyc_output/
-.vscode
-dist
-!yarn.lock
