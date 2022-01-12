@@ -23,6 +23,10 @@ class HomeController extends Controller {
       SERVER_DATA: 'server template data',
     });
   }
+
+  api() {
+    this.ctx.body = 'hi, egg';
+  }
 }
 
 module.exports = HomeController;

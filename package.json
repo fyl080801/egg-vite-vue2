@@ -1,32 +1,30 @@
 {
-  "name": "test2",
+  "name": "egg-vite-vue2",
   "version": "1.0.0",
   "description": "",
   "private": true,
   "dependencies": {
-    "egg": "^2.15.1",
-    "egg-scripts": "^2.11.0",
-    "egg-view-nunjucks": "^2.3.0",
-    "koa-connect": "^2.1.0",
-    "koa2-connect": "^1.0.2"
+    "egg": "^2.33.1",
+    "egg-scripts": "^2.15.2",
+    "egg-view-nunjucks": "^2.3.0"
   },
   "devDependencies": {
     "@vitejs/plugin-legacy": "^1.6.4",
     "@vue/composition-api": "^1.4.3",
-    "autod": "^3.0.1",
+    "autod": "^3.1.2",
     "autod-egg": "^1.1.0",
-    "egg-bin": "^4.11.0",
-    "egg-ci": "^1.11.0",
-    "egg-mock": "^3.21.0",
-    "eslint": "^5.13.0",
-    "eslint-config-egg": "^7.1.0",
+    "egg-bin": "^4.16.4",
+    "egg-ci": "^1.19.0",
+    "egg-mock": "^4.2.0",
+    "eslint": "^8.6.0",
+    "eslint-config-egg": "^10.0.0",
     "vite": "^2.7.10",
     "vite-plugin-vue2": "^1.9.2",
     "vue": "^2.6.14",
     "vue-template-compiler": "^2.6.14"
   },
   "engines": {
-    "node": ">=10.0.0"
+    "node": ">=12.0.0"
   },
   "scripts": {
     "start": "egg-scripts start --daemon --title=egg-server-test2",

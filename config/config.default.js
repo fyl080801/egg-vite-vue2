@@ -2,6 +2,8 @@
 
 'use strict';
 
+process.setMaxListeners(0);
+
 /**
  * @param {Egg.EggAppInfo} appInfo app info
  */
