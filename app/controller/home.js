@@ -1,17 +1,13 @@
 'use strict';
 
 const Controller = require('egg').Controller;
-
-const fs = require('fs');
-
-const path = require('path');
+const fs = require('node:fs');
+const path = require('node:path');
 
 class HomeController extends Controller {
   async index() {
-    const server = await this.ctx.service.vite.getServer();
-
     // 使用vite服务输出视图
-    const html = await server.transformIndexHtml(
+    const html = await this.ctx.vite.transformIndexHtml(
       this.ctx.request.url,
       await fs.promises.readFile(
         path.join(process.cwd(), 'index.html'),
@@ -19,8 +15,12 @@ class HomeController extends Controller {
       ),
     );
 
+    console.log(html);
+
     this.ctx.body = await this.ctx.renderString(html, {
-      SERVER_DATA: 'server template data',
+      serverData: {
+        text: 'server template data',
+      },
     });
   }
 

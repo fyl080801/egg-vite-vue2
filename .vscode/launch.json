@@ -9,11 +9,14 @@
       "request": "launch",
       "name": "Egg Debug",
       "runtimeExecutable": "npm",
-      "runtimeArgs": ["run", "debug", "--", "--inspect-brk"],
+      "runtimeArgs": [
+        "run",
+        "debug",
+        "--",
+        "--inspect-brk"
+      ],
       "console": "integratedTerminal",
       "restart": true,
-      "protocol": "auto",
-      "port": 9229,
       "autoAttachChildProcesses": true
     },
     {
@@ -21,9 +24,12 @@
       "request": "launch",
       "name": "Egg Test",
       "runtimeExecutable": "npm",
-      "runtimeArgs": ["run", "test-local", "--", "--inspect-brk"],
-      "protocol": "auto",
-      "port": 9229,
+      "runtimeArgs": [
+        "run",
+        "test-local",
+        "--",
+        "--inspect-brk"
+      ],
       "autoAttachChildProcesses": true
     },
     {
@@ -33,7 +39,6 @@
       "localRoot": "${workspaceRoot}",
       "remoteRoot": "/usr/src/app",
       "address": "localhost",
-      "protocol": "auto",
       "port": 9999
     }
   ]

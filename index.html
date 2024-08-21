@@ -1,21 +1,20 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="">
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <script>
-      window.SERVER_DATA = '{{SERVER_DATA}}';
+      {# window.serverData = {{ serverData | dump | safe }} #}
     </script>
   </head>
   <!-- node 层变量 -->
   <body>
     <noscript>
-      <strong
-        >We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work
-        properly without JavaScript enabled. Please enable it to
-        continue.</strong
-      >
+      <strong>
+        We're sorry but app doesn't work properly without JavaScript enabled.
+        Please enable it to continue.
+      </strong>
     </noscript>
     <div id="app"></div>
     <script type="module" src="./src/main.js"></script>

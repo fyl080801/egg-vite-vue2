@@ -1,21 +1,11 @@
-<script>
-import { defineComponent, ref } from '@vue/composition-api';
+<script setup>
+import { ref } from 'vue';
 
-export default defineComponent({
-  setup() {
-    const text = ref('');
-
-    return {
-      text,
-      serverdata: window.SERVER_DATA,
-    };
-  },
-});
+const text = ref('');
 </script>
 
 <template>
   <div>
-    <h2>{{ serverdata }}</h2>
     <input v-model="text" />
     <p>{{ text }}</p>
   </div>
